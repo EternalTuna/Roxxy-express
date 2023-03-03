@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice app</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+        <body>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+              <img src="/img/logo.png" alt="My App Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item <% if (currentPage === 'home') { %>active<% } %>">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+              </ul>
+              <% if (isLoggedIn) { %>
+                <form class="form-inline" method="post" action="/logout">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+                </form>
+              <% } else { %>
+                <ul class="navbar-nav">
+                  <li class="nav-item <% if (currentPage === 'login') { %>active<% } %>">
+                    <a class="nav-link" href="/login">Login</a>
+                  </li>
+                  <li class="nav-item <% if (currentPage === 'signup') { %>active<% } %>">
+                    <a class="nav-link" href="/signup">Sign up</a>
+                  </li>
+                </ul>
+              <% } %>
+            </div>
+          </nav>          
+              <div class="container">
+                <h1>Hello, World!</h1>
+                <p>Welcome to my Express app.</p>
+              </div>
+              <script src="/bootstrap/js/bootstrap.min.js"></script>
+            </body>
+          </html>
