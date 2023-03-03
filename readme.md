@@ -1,10 +1,18 @@
 How to start this app
-'''sh
 run it in repository
+```sh
 npm install bootstrap
+```
+```sh
 npm install express
+```
+```sh
 npm install express-session
+```
+```sh
 npm install ejs
-'''sh
+```
 how to start
+```sh
 node index.js
+```
