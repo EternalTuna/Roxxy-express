@@ -1,5 +1,5 @@
-How to start this app
-run it in repository
+# How to start this app
+ ## run it in repository
 ```sh
 npm install bootstrap
 ```
@@ -12,7 +12,7 @@ npm install express-session
 ```sh
 npm install ejs
 ```
-how to start
+### how to start
 ```sh
 node index.js
 ```
